@@ -6,9 +6,15 @@
    [:label.label placeholder]
    [:div.control>input.input.is-primary {:placeholder placeholder}]])
 
+
+(defn- title
+  [title]
+  [:h1.title title])
+
 (defn biography
   []
-  [:div (input "Character Name")
+  [:div (title "Player Bio")
+   (input "Character Name")
    (input "Player")
    (input "Race")
    (input "Class")

@@ -1,7 +1,8 @@
 (ns pathfinder-tools.core
     (:require
      [reagent.core :as r]
-     [pathfinder-tools.components.biography :refer [biography]]))
+     [pathfinder-tools.components.biography :refer [biography]]
+     [pathfinder-tools.components.sheet :refer [sheet]]))
 
 ;; -------------------------
 ;; Views
@@ -10,6 +11,7 @@
   []
   [:div
    [:h2 "Welcome to Pathfinder Tools"]
+  ;; [sheet]
    [biography]])
 
 ;; -------------------------
