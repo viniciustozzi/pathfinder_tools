@@ -12,7 +12,8 @@
   []
   [:div
    [:h2 "Welcome to Pathfinder Tools"]
-  ;; [sheet]
+   [:p]
+   [sheet]
    [biography]
    [weapons]])
 
