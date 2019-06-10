@@ -1,14 +1,10 @@
-(ns pathfinder-tools.components.biography)
-
-(defn- input
-  [placeholder]
-  [:div.field
-   [:label.label placeholder]
-   [:div.control>input.input.is-primary {:placeholder placeholder}]])
+(ns pathfinder-tools.components.biography
+  (:require [pathfinder-tools.ui :refer [title input]]))
 
 (defn biography
   []
-  [:div (input "Character Name")
+  [:div (title "Player Bio")
+   (input "Character Name")
    (input "Player")
    (input "Race")
    (input "Class")
