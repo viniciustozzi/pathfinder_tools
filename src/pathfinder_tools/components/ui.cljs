@@ -1,4 +1,4 @@
-(ns pathfinder-tools.ui)
+(ns pathfinder-tools.components.ui)
 
 (defn input
   [placeholder]

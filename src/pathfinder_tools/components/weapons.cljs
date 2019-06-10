@@ -1,5 +1,5 @@
 (ns pathfinder-tools.components.weapons
-  (:require [pathfinder-tools.ui :refer [title input]]
+  (:require [pathfinder-tools.components.ui :refer [title input]]
             [reagent.core :as r]))
 
 (def weapon-set (r/atom 1))
