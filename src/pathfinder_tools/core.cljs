@@ -2,9 +2,9 @@
   (:require
     [reagent.core :as r]
     [pathfinder-tools.components.biography :refer [biography]]
-    [pathfinder-tools.components.skills :refer [skills]]))
-[pathfinder-tools.components.sheet :refer [sheet]]
-[pathfinder-tools.components.weapons :refer [weapons]] ) )
+    [pathfinder-tools.components.skills :refer [skills]]
+    [pathfinder-tools.components.sheet :refer [sheet]]
+    [pathfinder-tools.components.weapons :refer [weapons]]))
 
 ;; -------------------------
 ;; Views
@@ -13,6 +13,8 @@
   []
   [:div
    [:h2 "Welcome to Pathfinder Tools"]
+   [:p]
+   [sheet]
    [biography]
    [skills]
    [sheet]
