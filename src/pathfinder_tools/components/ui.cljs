@@ -10,3 +10,8 @@
 (defn title
   [title]
   [:h1.title title])
+
+(defn button
+  [text on-click]
+  [:button.button.tooltip
+   {:on-click on-click} text])

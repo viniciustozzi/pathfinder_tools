@@ -1,5 +1,5 @@
 (ns pathfinder-tools.components.weapons
-  (:require [pathfinder-tools.components.ui :refer [title input]]
+  (:require [pathfinder-tools.components.ui :refer [title input button]]
             [reagent.core :as r]))
 
 (def weapon-set (r/atom 1))
@@ -20,6 +20,4 @@
   []
   [:div
    (map make-weapon-ui (range @weapon-set))
-   [:button.button.tooltip
-    {:data-tooltip "Add new weapon"
-     :on-click #(swap! weapon-set inc)} "Add new Weapon"]])
+   (button "Add new weapon" #(swap! weapon-set inc))])
