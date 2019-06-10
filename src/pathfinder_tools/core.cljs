@@ -1,7 +1,8 @@
 (ns pathfinder-tools.core
     (:require
      [reagent.core :as r]
-     [pathfinder-tools.components.biography :refer [biography]]))
+     [pathfinder-tools.components.biography :refer [biography]]
+     [pathfinder-tools.components.skills :refer [skills]]))
 
 ;; -------------------------
 ;; Views
@@ -10,7 +11,8 @@
   []
   [:div
    [:h2 "Welcome to Pathfinder Tools"]
-   [biography]])
+   [biography]
+   [skills]])
 
 ;; -------------------------
 ;; initialize app
