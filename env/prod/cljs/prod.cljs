@@ -1,6 +1,6 @@
-(ns pathfinder-tools.prod
+(ns ..prod
   (:require
-    [pathfinder-tools.core :as core]))
+    [..core :as core]))
 
 ;;ignore println statements in prod
 (set! *print-fn* (fn [& _]))

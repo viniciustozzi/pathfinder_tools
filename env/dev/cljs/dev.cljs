@@ -1,6 +1,6 @@
-(ns ^:figwheel-no-load pathfinder-tools.dev
+(ns ^:figwheel-no-load ..dev
   (:require
-    [pathfinder-tools.core :as core]
+    [..core :as core]
     [devtools.core :as devtools]))
 
 (extend-protocol IPrintWithWriter
