@@ -2,7 +2,8 @@
     (:require
      [reagent.core :as r]
      [pathfinder-tools.components.biography :refer [biography]]
-     [pathfinder-tools.components.sheet :refer [sheet]]))
+     [pathfinder-tools.components.sheet :refer [sheet]]
+     [pathfinder-tools.components.weapons :refer [weapons]]))
 
 ;; -------------------------
 ;; Views
@@ -13,7 +14,8 @@
    [:h2 "Welcome to Pathfinder Tools"]
    [:p]
    [sheet]
-   [biography]])
+   [biography]
+   [weapons]])
 
 ;; -------------------------
 ;; initialize app
