@@ -1,3 +1,6 @@
+# Path finder
+
+A tool to help with Pathfinder RPG campaign
 
 ### Development mode
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:

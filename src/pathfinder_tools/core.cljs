@@ -1,9 +1,10 @@
 (ns pathfinder-tools.core
-    (:require
-     [reagent.core :as r]
-     [pathfinder-tools.components.biography :refer [biography]]
-     [pathfinder-tools.components.sheet :refer [sheet]]
-     [pathfinder-tools.components.weapons :refer [weapons]]))
+  (:require
+    [reagent.core :as r]
+    [pathfinder-tools.components.biography :refer [biography]]
+    [pathfinder-tools.components.skills :refer [skills]]
+    [pathfinder-tools.components.sheet :refer [sheet]]
+    [pathfinder-tools.components.weapons :refer [weapons]]))
 
 ;; -------------------------
 ;; Views
@@ -15,6 +16,8 @@
    [:p]
    [sheet]
    [biography]
+   [skills]
+   [sheet]
    [weapons]])
 
 ;; -------------------------
