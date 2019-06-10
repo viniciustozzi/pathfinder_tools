@@ -1,14 +1,15 @@
 (ns pathfinder-tools.components.sheet)
 
-(defn- title
-  [title]
-  [:h1.title title])
-
-(defn ability-values
+(defn- ability-values
   [name]
-  [:div])
+  [:div.columns
+   [:div.column name]
+   [:div.column name]
+   [:div.column name]
+   [:div.column name]])
 
 (defn sheet
   []
   [:div
-   (title "Character Sheet")])
+   ;;2(ui/title "Character Sheet")
+   (ability-values "STR")])
