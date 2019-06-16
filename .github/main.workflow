@@ -1,6 +1,6 @@
 workflow "Build" {
   on = "push"
-  resolves = ["Deploy to gh-pages"]
+  resolves = ["Deploy to pages"]
 }
 
 action "Package" {
@@ -8,7 +8,7 @@ action "Package" {
   args = "package"
 }
 
-action "Deploy to gh-pages" {
+action "Deploy to pages" {
   uses = "JamesIves/github-pages-deploy-action@master"
   env = {
     BRANCH = "gh-pages"
