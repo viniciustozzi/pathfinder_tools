@@ -5,6 +5,5 @@ workflow "Build" {
 
 action "GitHub Action for lein" {
   uses = "./action"
-  runs = "lein"
   args = "deps"
 }
