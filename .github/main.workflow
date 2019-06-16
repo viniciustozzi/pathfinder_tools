@@ -4,7 +4,7 @@ workflow "Build" {
 }
 
 action "Package" {
-  uses = "./action"
+  uses = "./.github/action"
   args = "package"
 }
 
