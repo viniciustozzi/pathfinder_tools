@@ -5,7 +5,7 @@ workflow "Build" {
 
 action "Package" {
   uses = "./.github/action"
-  args = "package"
+  args = "package cljsbuild once release"
 }
 
 action "Deploy to pages" {
