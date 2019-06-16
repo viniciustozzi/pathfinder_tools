@@ -1,9 +1,19 @@
 workflow "Build" {
   on = "push"
-  resolves = ["GitHub Action for lein"]
+  resolves = ["Deploy to pages"]
 }
 
-action "GitHub Action for lein" {
+action "Package" {
   uses = "./action"
-  args = "deps"
+  args = "package"
+}
+
+action "Deploy to pages" {
+  uses = "JamesIves/github-pages-deploy-action@master"
+  env = {
+    BRANCH = "gh-pages"
+    FOLDER = "public"
+  }
+  secrets = ["ACCESS_TOKEN"]
+  needs = ["Package"]
 }
