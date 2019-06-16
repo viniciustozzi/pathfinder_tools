@@ -1,6 +1,6 @@
 workflow "Build" {
   on = "push"
-  resolves = ["ls"]
+  resolves = ["Deploy to gh-pages"]
 }
 
 action "Package" {
