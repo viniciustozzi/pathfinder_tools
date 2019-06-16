@@ -1,4 +1,4 @@
-FROM lein-alpine
+FROM lein
 
 LABEL version="0.1.0"
 LABEL repository="https://github.com/viniciustozzi/pathfinder_tools.git"
