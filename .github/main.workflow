@@ -8,9 +8,12 @@ action "Package" {
   args = "package"
 }
 
-action "ls" {
-  uses = "./action"
+action "Deploy to gh-pages" {
+  uses = "JamesIves/github-pages-deploy-action@master"
+  env = {
+    BRANCH = "gh-pages"
+    FOLDER = "public"
+  }
+  secrets = ["ACCESS_TOKEN"]
   needs = ["Package"]
-  runs = "ls"
-  args = "-a"
 }
