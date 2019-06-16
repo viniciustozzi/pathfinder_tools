@@ -10,6 +10,6 @@ action "Package" {
 
 action "ls" {
   uses = "./action"
-  run = "ls"
+  runs = "ls"
   needs = ["Package"]
 }
