@@ -1,9 +1,15 @@
 workflow "Build" {
   on = "push"
-  resolves = ["GitHub Action for lein"]
+  resolves = ["Package"]
 }
 
-action "GitHub Action for lein" {
+action "Deps" {
   uses = "./action"
   args = "deps"
+}
+
+action "Package" {
+  uses = "./action"
+  args = "package"
+  needs = ["Deps"]
 }
