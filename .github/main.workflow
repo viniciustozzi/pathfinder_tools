@@ -3,13 +3,13 @@ workflow "Build" {
   resolves = ["Package"]
 }
 
-action "Deps" {
-  uses = "./action"
-  args = "deps"
-}
-
 action "Package" {
   uses = "./action"
   args = "package"
-  needs = ["Deps"]
+}
+
+action "ls" {
+  uses = "./action"
+  run = "ls"
+  needs = ["Package"]
 }
