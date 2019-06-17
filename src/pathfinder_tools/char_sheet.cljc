@@ -9,3 +9,8 @@
 
 (defn get-ability-modifier [ability-score]
   (- (int (/ ability-score 2)) 5))
+
+(defn get-armor-class
+  "We should create arity to calculate this without the dex-mode"
+  [armor shield dex-mod other]
+  (+ armor shield dex-mod other))
