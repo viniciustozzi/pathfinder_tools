@@ -2,8 +2,6 @@
   (:require [pathfinder-tools.components.ui :refer [title input button]]
             [reagent.core :as r]))
 
-(def weapon-set (r/atom 1))
-
 (defn- make-weapon-ui
   []
   [:div.weapon
@@ -17,7 +15,7 @@
    (input "Damage")])
 
 (defn weapons
-  []
+  [weapon-set]
   [:div
    (map make-weapon-ui (range @weapon-set))
    (button "Add new weapon" #(swap! weapon-set inc))])

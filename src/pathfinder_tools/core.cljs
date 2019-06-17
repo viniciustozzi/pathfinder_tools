@@ -9,6 +9,8 @@
 ;; -------------------------
 ;; Views
 
+(def weapon-set (r/atom 1))
+
 (defn home-page
   []
   [:div
@@ -18,7 +20,7 @@
    [biography]
    [skills]
    [sheet]
-   [weapons]])
+   [weapons weapon-set]])
 
 ;; -------------------------
 ;; initialize app
