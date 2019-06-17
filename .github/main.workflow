@@ -3,9 +3,15 @@ workflow "Build" {
   resolves = ["Deploy to pages"]
 }
 
+action "Test" {
+  uses = "./.github/action"
+  args = "test"
+}
+
 action "Package" {
   uses = "./.github/action"
   args = "package"
+  needs = ["Test"]
 }
 
 action "Deploy to pages" {
