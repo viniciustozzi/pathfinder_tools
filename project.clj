@@ -2,7 +2,7 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+            :url  "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.520"]
@@ -13,39 +13,38 @@
 
   :clean-targets ^{:protect false}
 
-  [:target-path
-   [:cljsbuild :builds :app :compiler :output-dir]
-   [:cljsbuild :builds :app :compiler :output-to]]
+[:target-path
+ [:cljsbuild :builds :app :compiler :output-dir]
+ [:cljsbuild :builds :app :compiler :output-to]]
 
   :resource-paths ["public"]
 
 
   :figwheel {:http-server-root "."
-             :nrepl-port 7002
+             :nrepl-port       7002
              :nrepl-middleware [cider.piggieback/wrap-cljs-repl]
-             :css-dirs ["public/css"]}
+             :css-dirs         ["public/css"]}
 
   :cljsbuild {:builds {:app
                        {:source-paths ["src" "env/dev/cljs"]
                         :compiler
-                        {:main "pathfinder-tools.dev"
-                         :output-to "public/js/app.js"
-                         :output-dir "public/js/out"
-                         :asset-path   "js/out"
-                         :source-map true
-                         :optimizations :none
-                         :pretty-print  true}
+                                      {:main          "pathfinder-tools.dev"
+                                       :output-to     "public/js/app.js"
+                                       :output-dir    "public/js/out"
+                                       :asset-path    "js/out"
+                                       :source-map    true
+                                       :optimizations :none
+                                       :pretty-print  true}
                         :figwheel
-                        {:on-jsload "pathfinder-tools.core/mount-root"
-                         :open-urls ["http://localhost:3449/index.html"]}}
+                                      {:on-jsload "pathfinder-tools.core/mount-root"}}
                        :release
                        {:source-paths ["src" "env/prod/cljs"]
                         :compiler
-                        {:output-to "public/js/app.js"
-                         :output-dir "public/js/release"
-                         :optimizations :advanced
-                         :infer-externs true
-                         :pretty-print false}}}}
+                                      {:output-to     "public/js/app.js"
+                                       :output-dir    "public/js/release"
+                                       :optimizations :advanced
+                                       :infer-externs true
+                                       :pretty-print  false}}}}
 
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 

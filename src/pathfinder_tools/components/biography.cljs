@@ -1,10 +1,11 @@
 (ns pathfinder-tools.components.biography
-  (:require [pathfinder-tools.components.ui :as ui]))
+  (:require [pathfinder-tools.components.ui :as ui]
+            [pathfinder-tools.char-sheet :as char]))
 
 (defn biography
-  []
+  [char-set]
   [:div (ui/title "Player Bio")
-   (ui/input "Character Name")
+   (ui/atom-input "Character Name" char-set char/update-name)
    (ui/input "Player")
    (ui/input "Race")
    (ui/input "Class")

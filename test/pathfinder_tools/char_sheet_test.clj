@@ -16,3 +16,9 @@
   (testing "Ability modifier"
     (is (= -3 (get-ability-modifier 5)))
     (is (= -3 (get-ability-modifier 4)))))
+
+
+(deftest bio-update-name
+  (testing "Bio name"
+    (is (= {:name "gabs"} (update-name {} "gabs")))
+    (is (= {:name "gabs"} (update-name {:name "ruan"} "gabs")))))

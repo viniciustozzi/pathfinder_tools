@@ -9,7 +9,7 @@
 ;; -------------------------
 ;; Views
 
-(def weapon-set (r/atom 1))
+(def char-set (r/atom {}))
 
 (defn home-page
   []
@@ -17,10 +17,11 @@
    [:h2 "Welcome to Pathfinder Tools"]
    [:p]
    [sheet]
-   [biography]
+   [biography char-set]
    [skills]
    [sheet]
-   [weapons weapon-set]])
+   ;[weapons char-set]
+   ])
 
 ;; -------------------------
 ;; initialize app

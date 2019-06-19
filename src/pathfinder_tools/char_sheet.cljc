@@ -10,6 +10,9 @@
 (defn get-ability-modifier [ability-score]
   (- (int (/ ability-score 2)) 5))
 
+(defn update-name [char-set name]
+  (assoc char-set :name name))
+
 (defn get-armor-class
   "We should create arity to calculate this without the dex-mode"
   [armor shield dex-mod other]
