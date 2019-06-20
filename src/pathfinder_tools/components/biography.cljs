@@ -5,7 +5,7 @@
 (defn biography
   [char-set]
   [:div (ui/title "Player Bio")
-   (ui/atom-input "Character Name" char-set char/update-name)
+   (ui/atom-input "Character Name" char-set #(:name %) char/update-name)
    (ui/input "Player")
    (ui/input "Race")
    (ui/input "Class")

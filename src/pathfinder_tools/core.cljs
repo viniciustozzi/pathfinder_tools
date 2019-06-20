@@ -4,12 +4,12 @@
     [pathfinder-tools.components.biography :refer [biography]]
     [pathfinder-tools.components.skills :refer [skills]]
     [pathfinder-tools.components.sheet :refer [sheet]]
-    [pathfinder-tools.components.weapons :refer [weapons]]))
-
+    [pathfinder-tools.components.weapons :refer [weapons]]
+    [pathfinder-tools.components.items :refer [items]]))
 ;; -------------------------
 ;; Views
 
-(def char-set (r/atom {}))
+(def char-set (r/atom {:items []}))
 
 (defn home-page
   []
@@ -21,8 +21,7 @@
    [skills]
    [sheet]
    ;[weapons char-set]
-   ])
-
+   [items char-set]])
 ;; -------------------------
 ;; initialize app
 
